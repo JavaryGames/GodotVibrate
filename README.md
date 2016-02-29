@@ -8,7 +8,7 @@
 
 - Move the vibrate/GodotVibrate.java to godot/platform/android/java/src/org/godotengine/godot
 
-**Note:** The vibrate/android.jar is taken from  *android-sdk-linux/platforms/android-19 *. You may choose to use any other api version.
+**Note:** The vibrate/android.jar is taken from  *android-sdk-linux/platforms/android-19*. You may choose to use any other api version.
 
 ###Compile
 1. #> scons platform=android
