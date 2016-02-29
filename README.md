@@ -43,3 +43,6 @@ Custom Package (Debug/Release):
 ####License
 MIT
 
+###Special Mention
+Thanks [TeamKrishna](http://teamkrishna.in) for the request. More plugins to follow. 
+
