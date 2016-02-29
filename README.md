@@ -40,5 +40,6 @@ Custom Package (Debug/Release):
 
 > Permission check: Vibrate
 
-Enjoy!!
+####License
+MIT
 
