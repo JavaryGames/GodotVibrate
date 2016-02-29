@@ -1,12 +1,12 @@
 #GodotVibrate
-Vibration support on Godot engine for Android.
+- Vibration support on Godot engine for Android. (https://github.com/okamstudio/godot)
 
-Godot version 2.0 stable.
+- Godot version 2.0 stable.
 
 ##How to use
-Drop the vibrate folder inside godot/modules
+- Drop the vibrate folder inside godot/modules
 
-Move the vibrate/GodotVibrate.java to godot/platform/android/java/src/org/godotengine/godot
+- Move the vibrate/GodotVibrate.java to godot/platform/android/java/src/org/godotengine/godot
 
 **Note:** The vibrate/android.jar is taken from  *android-sdk-linux/platforms/android-19 *. You may choose to use any other api version.
 
