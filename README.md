@@ -44,5 +44,10 @@ Custom Package (Debug/Release):
 MIT
 
 ###Special Mention
-Thanks [TeamKrishna](http://teamkrishna.in) for the request. More plugins to follow. 
+Thanks [TeamKrishna](http://teamkrishna.in)
+
+Other plugings:
+- [Godot-SpeechToText](https://github.com/literaldumb/Godot-SpeechToText)
+- [Godot-TextToSpeech](https://github.com/literaldumb/Godot-TextToSpeech)
+- [Godot-CustomSpeech](https://github.com/literaldumb/Godot-CustomSpeech)
 
