@@ -15,6 +15,10 @@ public class GodotVibrate extends Godot.SingletonBase {
 	public void doVibrate(int ms) {
 		Vibrator v = (Vibrator) m_pActivity.getSystemService(Context.VIBRATOR_SERVICE);
 
+		if (!v.hasVibrator()) {
+			return;
+		}
+
 		// Vibrate for ms milliseconds
 		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
 			v.vibrate(VibrationEffect.createOneShot(ms, VibrationEffect.DEFAULT_AMPLITUDE));
