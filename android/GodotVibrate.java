@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Vibrator;
 import android.os.VibrationEffect;
 import android.content.Context;
+import android.util.Log;
 
 public class GodotVibrate extends Godot.SingletonBase {
 
@@ -15,15 +16,19 @@ public class GodotVibrate extends Godot.SingletonBase {
 	public void doVibrate(int ms) {
 		Vibrator v = (Vibrator) m_pActivity.getSystemService(Context.VIBRATOR_SERVICE);
 
-		if (!v.hasVibrator()) {
+		if (v == null || !v.hasVibrator()) {
 			return;
 		}
 
-		// Vibrate for ms milliseconds
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-			v.vibrate(VibrationEffect.createOneShot(ms, VibrationEffect.DEFAULT_AMPLITUDE));
-		} else {
-			v.vibrate(ms);
+		try {
+			// Vibrate for ms milliseconds
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+				v.vibrate(VibrationEffect.createOneShot(ms, VibrationEffect.DEFAULT_AMPLITUDE));
+			} else {
+				v.vibrate(ms);
+			}
+		} catch (NullPointerException e) {
+			Log.d("godot", "Error while trying to make the device vibrate (known issue in Samsung Oreo (8.1.0) devices).");
 		}
 	}
 
