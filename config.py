@@ -3,4 +3,5 @@ def can_build(platform):
 
 def configure(env):
     if env['platform'] == 'android':
+        return
         env.android_add_java_dir("android")
